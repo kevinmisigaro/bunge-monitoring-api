@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class SectorField extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name', 'sector_id'
+    ];
 }

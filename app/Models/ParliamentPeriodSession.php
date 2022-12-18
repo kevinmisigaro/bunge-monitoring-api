@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class ParliamentPeriodSession extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name', 'parliament_period_id'
+    ];
 }

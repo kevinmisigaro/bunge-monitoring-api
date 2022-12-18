@@ -15,6 +15,8 @@ class CreateStreetsTable extends Migration
     {
         Schema::create('streets', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->foreignId('district_id')->constrained();
             $table->timestamps();
         });
     }

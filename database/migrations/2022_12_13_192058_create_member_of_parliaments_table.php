@@ -17,6 +17,7 @@ class CreateMemberOfParliamentsTable extends Migration
             $table->id();
             $table->string('phone');
             $table->integer('gender');
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
     }

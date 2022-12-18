@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Street extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'name', 'district_id'
+    ];
+
+    public function district(){
+        $this->belongsTo(District::class);
+    }
 }
