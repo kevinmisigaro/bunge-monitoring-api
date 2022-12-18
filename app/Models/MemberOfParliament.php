@@ -12,6 +12,6 @@ class MemberOfParliament extends Model
     protected $table = 'member_of_parliaments';
 
     protected $fillable = [
-        'phone', 'gender', 'user_id'
+        'phone', 'gender', 'name', 'email'
     ];
 }
