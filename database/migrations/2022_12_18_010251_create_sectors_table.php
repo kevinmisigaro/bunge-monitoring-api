@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateParliamentChairpeopleTable extends Migration
+class CreateSectorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateParliamentChairpeopleTable extends Migration
      */
     public function up()
     {
-        Schema::create('parliament_chairpeople', function (Blueprint $table) {
+        Schema::create('sectors', function (Blueprint $table) {
             $table->id();
-            $table->string('chairperson');
+            $table->string('name');
             $table->timestamps();
-            $table->foreignId('parliaments_periods_id')->constrained('parliaments_periods');
         });
     }
 
@@ -28,6 +27,6 @@ class CreateParliamentChairpeopleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('parliament_chairpeople');
+        Schema::dropIfExists('sectors');
     }
 }

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Parliament_period_session extends Model
+class SectorField extends Model
 {
     use HasFactory;
 }

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Targeted_group extends Model
+class ParliamentAgenda extends Model
 {
     use HasFactory;
 }

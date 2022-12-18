@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class MP_suggestion extends Model
+class GovermentResponse extends Model
 {
     use HasFactory;
 }

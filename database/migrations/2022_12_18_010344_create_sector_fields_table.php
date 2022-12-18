@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEconomicSectorsTable extends Migration
+class CreateSectorFieldsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateEconomicSectorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('economic_sectors', function (Blueprint $table) {
+        Schema::create('sector_fields', function (Blueprint $table) {
             $table->id();
-            $table->string('sector');
-            $table->string('sector_field');
-            $table->text('field_issue');
+            $table->string('name');
+            $table->foreignId('sector_id')->constrained();
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateEconomicSectorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('economic_sectors');
+        Schema::dropIfExists('sector_fields');
     }
 }

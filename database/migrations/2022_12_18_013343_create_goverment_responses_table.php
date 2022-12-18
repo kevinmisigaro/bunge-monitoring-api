@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateParliamentPeriodsTable extends Migration
+class CreateGovermentResponsesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateParliamentPeriodsTable extends Migration
      */
     public function up()
     {
-        Schema::create('parliament_periods', function (Blueprint $table) {
+        Schema::create('goverment_responses', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('Speaker');
-            $table->string('Deputy');
-            $table->string('Duration');
+            $table->foreignId('mp_question_id')->constrained('mp_questions');
+            $table->textarea('description');    
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateParliamentPeriodsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('parliament_periods');
+        Schema::dropIfExists('goverment_responses');
     }
 }

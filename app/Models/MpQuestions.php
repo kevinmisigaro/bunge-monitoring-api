@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Session_sitting_agenda extends Model
+class MpQuestions extends Model
 {
     use HasFactory;
 }

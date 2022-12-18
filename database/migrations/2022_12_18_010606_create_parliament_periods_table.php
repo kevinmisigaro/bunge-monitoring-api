@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGeoLocationsTable extends Migration
+class CreateParliamentPeriodsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateGeoLocationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('geo_locations', function (Blueprint $table) {
+        Schema::create('parliament_periods', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('geo_location');
+            $table->string('administration');
+            $table->string('duration');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateGeoLocationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('geo_locations');
+        Schema::dropIfExists('parliament_periods');
     }
 }
