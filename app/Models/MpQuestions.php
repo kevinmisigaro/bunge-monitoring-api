@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class MpQuestions extends Model
 {
     use HasFactory;
+
+    protected $table = 'mp_questions';
+
+    protected $fillable = [
+        'question', 'type', 'description'
+    ];
+
 }
