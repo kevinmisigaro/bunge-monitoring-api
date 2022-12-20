@@ -12,7 +12,9 @@ class MpQuestions extends Model
     protected $table = 'mp_questions';
 
     protected $fillable = [
-        'question', 'type', 'description'
+        'question', 'type', 'description', 'member_of_parliament_id', 
+        'targeted_group_id', 'sector_field_id', 'parliament_agenda_category_id',
+         'parliament_period_session_id','parliament_agenda_id'
     ];
 
 }

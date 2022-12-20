@@ -20,7 +20,7 @@ class CreateMpQuestionsTable extends Migration
             $table->foreignId('member_of_parliament_id')->constrained('member_of_parliaments');
             $table->foreignId('targeted_group_id')->constrained('targeted_group');
             $table->foreignId('sector_field_id')->constrained('sector_fields');
-            $table->foreignId('parliament_agenda_category')->constrained('parliament_agenda_categories');
+            $table->foreignId('parliament_agenda_category_id')->constrained('parliament_agenda_categories');
             $table->foreignId('parliament_period_session_id')->constrained('parliament_period_sessions');
             $table->foreignId('parliament_agenda_id')->constrained('parliament_agendas')->nullable();
             $table->timestamps();
