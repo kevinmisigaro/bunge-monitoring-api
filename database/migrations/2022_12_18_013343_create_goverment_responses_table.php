@@ -16,7 +16,7 @@ class CreateGovermentResponsesTable extends Migration
         Schema::create('goverment_responses', function (Blueprint $table) {
             $table->id();
             $table->foreignId('mp_question_id')->constrained('mp_questions');
-            $table->textarea('description');    
+            $table->text('description');    
             $table->timestamps();
         });
     }
